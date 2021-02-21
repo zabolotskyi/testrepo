@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from 'react'
+import styled from '@emotion/styled'
 
 const StyledFooter = styled.div`
   display: flex;
@@ -21,10 +21,9 @@ const StyledFooter = styled.div`
   }
 `
 
-const Footer = ({data}) => {
-  const createMarkup = () => {
-    return {__html: data};
-  }
+const Footer = ({ data }) => {
+  // createMarkup can be extracted to utils. It's used 2 times in the app.
+  const createMarkup = () => ({ __html: data })
 
   return (
     <StyledFooter>
@@ -33,4 +32,4 @@ const Footer = ({data}) => {
   )
 }
 
-export default Footer;
+export default Footer
